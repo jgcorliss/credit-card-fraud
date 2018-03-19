@@ -1,2 +1,6 @@
-# credit-card-fraud
-Detecting credit card fraud with machine learning on a Kaggle dataset
+# Credit Card Fraud Detection
+In this project I construct machine learning models to predict fraud in European credit card transactions. I also make several data visualizations to reveal patterns and structure in the data.
+
+The dataset includes credit card transactions made in September 2013 by European cardholders. The data contains 284,807 transactions that occurred over a two-day period, of which 492 (0.17%) are fraudulent. Each transaction has 30 features, all of which are numerical. The features `V1, V2, ..., V28` are the result of a PCA transformation. To protect confidentiality, background information on these features is not available. The `Time` feature contains the time elapsed since the first transaction, and the `Amount` feature contains the transaction amount. The response variable, `Class`, is 1 in the case of fraud, and 0 otherwise.
+
+I was able to accurately predict fraudulent transactions using a random forest model. I found that 6 of the 30 features are most useful for detecting fraud. On a test set consisting of 20% of the original data, the predictions from the random forest model had a Matthews correlation coefficient (MCC) of 0.89. I also constructed linear classifiers and a Naive Bayes model, but these models underperformed the random forest. To improve a particular model, I optimized hyperparameters via a grid search with 3-fold cross-validation.
